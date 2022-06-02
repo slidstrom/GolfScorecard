@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GolfScorecard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GolfScorecard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,16 +65,16 @@
             </objects>
             <point key="canvasLocation" x="-13" y="54"/>
         </scene>
-        <!--View Controller-->
+        <!--Round Set Up View Controller-->
         <scene sceneID="Rqw-Q9-PaH">
             <objects>
-                <viewController id="RBW-r1-de0" sceneMemberID="viewController">
+                <viewController id="RBW-r1-de0" customClass="RoundSetUpViewController" customModule="GolfScorecard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T5J-iN-ZTT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Szy-sa-T4n">
-                                <rect key="frame" x="107" y="108" width="200" height="550"/>
+                                <rect key="frame" x="107" y="98" width="200" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU5-SB-mtn">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
@@ -134,13 +134,26 @@
                                         <rect key="frame" x="0.0" y="450" width="200" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="golferFourBeginEdit:" destination="RBW-r1-de0" eventType="editingDidBegin" id="yfi-lf-Aks"/>
+                                            <action selector="golferFourEndEdit:" destination="RBW-r1-de0" eventType="editingDidEnd" id="J3D-Gk-TJ1"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pek-OA-zsd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3So-Ya-o3Q">
                                         <rect key="frame" x="0.0" y="500" width="200" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pek-OA-zsd">
+                                        <rect key="frame" x="0.0" y="550" width="200" height="50"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                        <connections>
+                                            <action selector="startTapped:" destination="RBW-r1-de0" eventType="touchUpInside" id="YAX-Si-civ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -148,11 +161,19 @@
                         <viewLayoutGuide key="safeArea" id="XGg-6A-DM1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Szy-sa-T4n" firstAttribute="top" secondItem="XGg-6A-DM1" secondAttribute="top" constant="20" id="cL6-Pg-xc4"/>
+                            <constraint firstItem="Szy-sa-T4n" firstAttribute="top" secondItem="XGg-6A-DM1" secondAttribute="top" constant="10" id="cL6-Pg-xc4"/>
                             <constraint firstItem="Szy-sa-T4n" firstAttribute="centerX" secondItem="T5J-iN-ZTT" secondAttribute="centerX" id="gvQ-vO-EVW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LQn-ij-1ER"/>
+                    <connections>
+                        <outlet property="courseNameTextField" destination="euo-OC-m2D" id="1mZ-4N-5Km"/>
+                        <outlet property="golferFourTextField" destination="f3H-Hp-67Z" id="0Jw-ba-t5d"/>
+                        <outlet property="golferOneTextField" destination="cQX-Dt-vmQ" id="R3g-h5-BHE"/>
+                        <outlet property="golferThreeTextField" destination="kl3-Xy-2dP" id="BR0-Gg-IoB"/>
+                        <outlet property="golferTwoTextField" destination="9uR-9Z-PLN" id="dau-fD-0Oe"/>
+                        <outlet property="startButton" destination="pek-OA-zsd" id="C7B-oO-IBu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vo-sg-zA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
