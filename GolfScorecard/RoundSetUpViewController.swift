@@ -32,7 +32,7 @@ class RoundSetUpViewController: UIViewController {
     
     @IBAction func startTapped(_ sender: Any) {
         
-        let golfers = [Golfer]()
+        var golfers = [Golfer]()
         
         if ((golferOneTextField.text?.isEmpty) != nil){
             let golferOne = Golfer()
