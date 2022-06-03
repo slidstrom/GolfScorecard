@@ -16,6 +16,8 @@
 		ED05E28B28413EEF00EA84DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED05E28928413EEF00EA84DA /* LaunchScreen.storyboard */; };
 		ED05E29328493B5A00EA84DA /* RoundSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05E29228493B5A00EA84DA /* RoundSetUpViewController.swift */; };
 		ED05E29528493DFF00EA84DA /* Golfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05E29428493DFF00EA84DA /* Golfer.swift */; };
+		ED05E297284AA80E00EA84DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05E296284AA80D00EA84DA /* Constants.swift */; };
+		ED05E299284AAB5E00EA84DA /* TestHoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05E298284AAB5E00EA84DA /* TestHoleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		ED05E28C28413EEF00EA84DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED05E29228493B5A00EA84DA /* RoundSetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundSetUpViewController.swift; sourceTree = "<group>"; };
 		ED05E29428493DFF00EA84DA /* Golfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golfer.swift; sourceTree = "<group>"; };
+		ED05E296284AA80D00EA84DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ED05E298284AAB5E00EA84DA /* TestHoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHoleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				ED05E28428413EEC00EA84DA /* GolfScorecard.xcdatamodeld */,
 				ED05E29228493B5A00EA84DA /* RoundSetUpViewController.swift */,
 				ED05E29428493DFF00EA84DA /* Golfer.swift */,
+				ED05E296284AA80D00EA84DA /* Constants.swift */,
+				ED05E298284AAB5E00EA84DA /* TestHoleViewController.swift */,
 			);
 			path = GolfScorecard;
 			sourceTree = "<group>";
@@ -151,7 +157,9 @@
 				ED05E28028413EEC00EA84DA /* HomeViewController.swift in Sources */,
 				ED05E29328493B5A00EA84DA /* RoundSetUpViewController.swift in Sources */,
 				ED05E27C28413EEC00EA84DA /* AppDelegate.swift in Sources */,
+				ED05E297284AA80E00EA84DA /* Constants.swift in Sources */,
 				ED05E29528493DFF00EA84DA /* Golfer.swift in Sources */,
+				ED05E299284AAB5E00EA84DA /* TestHoleViewController.swift in Sources */,
 				ED05E27E28413EEC00EA84DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,3 +15,19 @@ class Golfer{
     
     
 }
+
+class Hole{
+    
+    var distance:Int?
+    var par:Int?
+    
+}
+
+class Course {
+    
+    var holes:[Hole]?
+    var golfers:[Golfer]?
+    var courseName:String?
+    
+    
+}
