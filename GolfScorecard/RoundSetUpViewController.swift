@@ -46,6 +46,30 @@ class RoundSetUpViewController: UIViewController {
         
         let numHoles = segmentedControl.selectedSegmentIndex
         
+        var holes = [Hole]()
+        // 9 holes
+        if numHoles == 0 {
+            var i = 0
+            while i < 9 {
+                var hole = Hole()
+                holes.append(hole)
+                i += 1
+                
+            }
+            
+        }
+        // 18 holes
+        else{
+            var i = 0
+            while i < 18 {
+                var hole = Hole()
+                holes.append(hole)
+                i += 1
+            
+            }
+            
+        }
+        
         // This is not optional
         if courseNameTextField.text?.isEmpty == true{
             // TODO: Display some sort of error message, we want a course name
@@ -90,6 +114,7 @@ class RoundSetUpViewController: UIViewController {
             golfers.append(golferFour)
         }
         
+        self.course.holes = holes
         self.course.golfers = golfers
         
         self.performSegue(withIdentifier: Constants.beginRoundSegue, sender: self)

@@ -11,23 +11,24 @@ class Golfer{
     
     
     var name:String?
-    var score:Int?
+    var score:Int = 0
     
     
 }
 
 class Hole{
     
-    var distance:Int?
-    var par:Int?
+    var distance:Int = 0
+    var par:Int = 0
     
 }
 
 class Course {
     
-    var holes:[Hole]?
+    var holes:[Hole] = [Hole]()
     var golfers:[Golfer]?
     var courseName:String?
+    var currentHole = 0
     
     
 }
