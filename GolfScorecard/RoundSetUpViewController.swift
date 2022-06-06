@@ -28,20 +28,6 @@ class RoundSetUpViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == Constants.beginRoundSegue{
-
-            // Create a new variable to store the instance of PlayerTableViewController
-            let destinationVC = segue.destination as! TestHoleViewController
-            destinationVC.course = self.course
-            print("Beginning new round")
-            
-
-        }
-
-    }
-    
     @IBAction func startTapped(_ sender: Any) {
         
         let numHoles = segmentedControl.selectedSegmentIndex
@@ -117,7 +103,12 @@ class RoundSetUpViewController: UIViewController {
         self.course.holes = holes
         self.course.golfers = golfers
         
-        self.performSegue(withIdentifier: Constants.beginRoundSegue, sender: self)
+        // Everything was successful, begin hole 1
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = storyboard.instantiateViewController(withIdentifier: "hole") as! TestHoleViewController
+        vc.course = self.course
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
         
     }
     
