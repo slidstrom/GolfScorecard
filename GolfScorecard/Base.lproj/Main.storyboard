@@ -395,6 +395,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Map"/>
+                                        <connections>
+                                            <segue destination="xhS-sf-55M" kind="show" id="Wpq-1C-luc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLo-u0-jBi">
                                         <rect key="frame" x="149.5" y="758" width="51" height="31"/>
@@ -436,6 +439,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wh-g5-NWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1893" y="54"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="oLq-Io-FIU">
+            <objects>
+                <viewController id="xhS-sf-55M" customClass="MapViewController" customModule="GolfScorecard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSm-V4-GPB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r1e-Ik-C8V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="14e-wH-r3P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r1e-Ik-C8V" firstAttribute="leading" secondItem="14e-wH-r3P" secondAttribute="leading" id="5sy-Ne-UT0"/>
+                            <constraint firstItem="r1e-Ik-C8V" firstAttribute="top" secondItem="14e-wH-r3P" secondAttribute="top" id="JkO-NG-gmt"/>
+                            <constraint firstItem="14e-wH-r3P" firstAttribute="trailing" secondItem="r1e-Ik-C8V" secondAttribute="trailing" id="c1D-A1-4TX"/>
+                            <constraint firstItem="14e-wH-r3P" firstAttribute="bottom" secondItem="r1e-Ik-C8V" secondAttribute="bottom" constant="150" id="kAU-Sv-nOX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="17P-AT-tnh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="062-IL-jBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893" y="797"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="QHN-zp-vMr">
