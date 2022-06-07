@@ -29,6 +29,8 @@ class Course {
     var golfers:[Golfer]?
     var courseName:String?
     var currentHole = 0
+    var totalPar = 0
+    var totalDistance = 0
     
     
 }

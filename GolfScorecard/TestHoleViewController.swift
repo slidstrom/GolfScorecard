@@ -38,6 +38,7 @@ class TestHoleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
         if let course = course {
@@ -162,22 +163,66 @@ class TestHoleViewController: UIViewController {
             course!.golfers![3].score += golfer4Score
         }
         
+        
         // We successfully added the scores, go to next hole
         course!.currentHole += 1
         
+        // If game is finished, go to results, if not, go to the next hole
+        if course!.currentHole == course!.holes.count {
+            print("Game is finished!")
+            // Calculate the total par and total distance of the course
+            for hole in course!.holes{
+                course!.totalPar += hole.par
+                course!.totalDistance += hole.distance
+            }
+            
+            // TODO: Create results view controller and pass the current course through
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "results") as! ResultsViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.course = self.course
+            self.present(vc, animated: false)
+        }
+        else{
+            print("Game is not finished, play another hole!")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "hole") as! TestHoleViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.course = self.course
+            self.present(vc, animated: false)
+        }
+        
+        
+        
+    }
+    
+    // TODO: THIS IS CURRENTLY BEING TESTED, IF THIS BUTTON IS TAPPED, THE ROUND ENDS
+    @IBAction func scorecardTapped(_ sender: Any) {
+        // TODO: Create results view controller and pass the current course through
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "hole") as! TestHoleViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "results") as! ResultsViewController
         vc.modalPresentationStyle = .fullScreen
         vc.course = self.course
         self.present(vc, animated: false)
-        
-        
     }
     
     
-    @IBAction func scorecardTapped(_ sender: Any) {
-        print("scorecard tapped")
+    @IBAction func p4beginEdit(_ sender: Any) {
+        self.view.frame.origin.y -= 100
     }
     
-
+    @IBAction func p4endEdit(_ sender: Any) {
+        self.view.frame.origin.y += 100
+    }
+    
+    
+    @IBAction func quitTapped(_ sender: Any) {
+        
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = storyboard.instantiateViewController(withIdentifier: "home")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+        
+    }
+    
 }
