@@ -199,6 +199,10 @@ class TestHoleViewController: UIViewController {
     // TODO: THIS IS CURRENTLY BEING TESTED, IF THIS BUTTON IS TAPPED, THE ROUND ENDS
     @IBAction func scorecardTapped(_ sender: Any) {
         // TODO: Create results view controller and pass the current course through
+        for hole in course!.holes{
+            course!.totalPar += hole.par
+            course!.totalDistance += hole.distance
+        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "results") as! ResultsViewController
         vc.modalPresentationStyle = .fullScreen
@@ -222,7 +226,6 @@ class TestHoleViewController: UIViewController {
         var vc = storyboard.instantiateViewController(withIdentifier: "home")
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
-        
     }
     
 }
