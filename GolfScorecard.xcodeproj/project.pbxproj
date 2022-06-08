@@ -21,6 +21,7 @@
 		EDD2511B284FBFA1006003F9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2511A284FBFA1006003F9 /* ResultsViewController.swift */; };
 		EDD2511E284FEBA4006003F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD2511D284FEBA4006003F9 /* MapKit.framework */; };
 		EDD25120284FEDEA006003F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2511F284FEDEA006003F9 /* MapViewController.swift */; };
+		EDD25122285121E5006003F9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD25121285121E5006003F9 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EDD2511A284FBFA1006003F9 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		EDD2511D284FEBA4006003F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EDD2511F284FEDEA006003F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EDD25121285121E5006003F9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				ED05E298284AAB5E00EA84DA /* TestHoleViewController.swift */,
 				EDD2511A284FBFA1006003F9 /* ResultsViewController.swift */,
 				EDD2511F284FEDEA006003F9 /* MapViewController.swift */,
+				EDD25121285121E5006003F9 /* LocationManager.swift */,
 			);
 			path = GolfScorecard;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				ED05E28628413EEC00EA84DA /* GolfScorecard.xcdatamodeld in Sources */,
 				ED05E28028413EEC00EA84DA /* HomeViewController.swift in Sources */,
 				ED05E29328493B5A00EA84DA /* RoundSetUpViewController.swift in Sources */,
+				EDD25122285121E5006003F9 /* LocationManager.swift in Sources */,
 				EDD25120284FEDEA006003F9 /* MapViewController.swift in Sources */,
 				ED05E27C28413EEC00EA84DA /* AppDelegate.swift in Sources */,
 				ED05E297284AA80E00EA84DA /* Constants.swift in Sources */,
